@@ -1,0 +1,52 @@
+import {ThemeProvider} from "./Context/ThemeContext";
+import AppRoutes from "./Routes/AppRoutes";
+
+function App() {
+  return (
+    <>
+    <ThemeProvider// contexts/ThemeContext.js
+import { createContext, useContext, useState, useEffect } from 'react';
+
+const ThemeContext = createContext();
+
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState('system'); // 'light', 'dark', or 'system'
+  const [accentColor, setAccentColor] = useState('emerald');
+  const [uiDensity, setUiDensity] = useState('comfortable');
+
+  // Detect system preference
+  useEffect(() => {
+    if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handler = () => setTheme(mediaQuery.matches ? 'dark' : 'light');
+      mediaQuery.addListener(handler);
+      return () => mediaQuery.removeListener(handler);
+    }
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider
+      value={{
+        theme,
+        setTheme,
+        accentColor,
+        setAccentColor,
+        uiDensity,
+        setUiDensity
+      }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+export function useTheme() {
+  return useContext(ThemeContext);
+}>
+<AppRoutes />
+    </ThemeProvider>
+    </>
+  )
+}
+
+export default App

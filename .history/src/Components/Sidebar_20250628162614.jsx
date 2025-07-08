@@ -1,0 +1,22 @@
+import React from 'react'
+import { NavLink } from 'react-router'
+import { CgProfile } from "react-icons/cg";
+import { FaRegFileCode } from "react-icons/fa";
+
+const Sidebar = () => {
+  return (
+    <div>
+      <aside className="w-64 min-h-screen bg-gray-900 text-white p-4">
+  <ul className="space-y-4">
+    <li className='flex p-2'><CgProfile className='p-3' size={55}/> <NavLink className='p-3 font-semibold text-lg' to="profile">Profile</NavLink></li>
+    <li className='flex p-2'> <NavLink to="skills">Skills</NavLink></li>
+    <li className='flex p-2'><NavLink to="projects">Projects</NavLink></li>
+    <li className='flex p-2'><NavLink to="settings">Settings</NavLink></li>
+  </ul>
+</aside>
+
+    </div>
+  )
+}
+
+export default Sidebar

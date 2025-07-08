@@ -1,0 +1,12 @@
+
+/* Light mode default */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark mode */
+.dark body {
+  background-color: #0f172a; /* dark slate or emerald theme */
+  color: white;
+}

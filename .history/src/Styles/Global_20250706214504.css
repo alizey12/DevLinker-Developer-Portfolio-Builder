@@ -1,0 +1,68 @@
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  .group-hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+  
+  .typing-dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background-color: #6ee7b7;
+    border-radius: 50%;
+    display: inline-block;
+    animation: typingAnimation 1.4s infinite ease-in-out;
+  }
+  .typing-dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  @keyframes typingAnimation {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+  }
+  /* src/styles/theme.css */
+:root {
+  /* Light theme defaults */
+  --bg-primary: #ffffff;
+  --text-primary: #111827;
+  --border-color: #e5e7eb;
+  --accent-primary: #10b981; /* emerald */
+  --spacing-unit: 1rem;
+  --text-size: 1rem;
+}
+
+.dark-theme {
+  --bg-primary: #111827;
+  --text-primary: #f3f4f6;
+  --border-color: #374151;
+}
+
+/* Accent Colors */
+.accent-emerald { --accent-primary: #10b981; }
+.accent-blue { --accent-primary: #3b82f6; }
+.accent-purple { --accent-primary: #8b5cf6; }
+.accent-rose { --accent-primary: #f43f5e; }
+
+/* Density Settings */
+.density-compact {
+  --spacing-unit: 0.75rem;
+  --text-size: 0.875rem;
+}
+
+.density-comfortable {
+  --spacing-unit: 1rem;
+  --text-size: 1rem;
+}
+
+.density-spacious {
+  --spacing-unit: 1.25rem;
+  --text-size: 1.125rem;
+}
