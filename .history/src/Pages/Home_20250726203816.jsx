@@ -15,13 +15,13 @@ const Home = () => {
       accent: `text-${accentColor}-400`
     },
     card: theme === 'dark' 
-      ? 'bg-emerald-900/80 border-emerald-800 hover:border-emerald-200 shadow-lg' 
-      : 'bg-white border-emerald-200 hover:border-emerald-500 shadow-lg',
+      ? 'bg-emerald-900/80 border-emerald-800 hover:border-emerald-600 shadow-lg' 
+      : 'bg-white border-emerald-200 hover:border-emerald-300 shadow-lg',
     border: theme === 'dark' ? 'border-emerald-800' : 'border-emerald-200',
     button: {
-      primary: `bg-${accentColor}-600 hover:bg-${accentColor}-300 text-white`,
+      primary: `bg-${accentColor}-600 hover:bg-${accentColor}-500 text-white`,
       secondary: theme === 'dark' 
-        ? 'border border-emerald-600 hover:bg-emerald-800/40 text-emerald-300' 
+        ? 'border border-emerald-00 hover:bg-emerald-800/40 text-emerald-300' 
         : 'border border-emerald-300 hover:bg-emerald-100 text-emerald-700'
     },
     hover: theme === 'dark' 
@@ -67,12 +67,12 @@ const Home = () => {
             Front-End Developer specializing in React.js and modern JavaScript. I create beautiful, responsive, and accessible web applications with exceptional user experiences.
           </p>
           <div className='flex flex-col sm:flex-row gap-4'>
-            <a href='https://github.com/alizey12' 
+            <NavLink 
               to="/projects" 
               className={`px-8 py-3 rounded-full font-medium transition-colors duration-300 text-center ${themeClasses.button.primary}`}
             >
               View my work
-            </a>
+            </NavLink>
             <a href='https://drive.google.com/file/d/18CLXAE74lQQ2P8CH7jVhxEW22OHYNcq_/view?usp=drive_open'
               className={`px-8 py-3 rounded-full font-medium transition-colors duration-300 text-center ${themeClasses.button.secondary}`}
             >

@@ -67,12 +67,14 @@ const Home = () => {
             Front-End Developer specializing in React.js and modern JavaScript. I create beautiful, responsive, and accessible web applications with exceptional user experiences.
           </p>
           <div className='flex flex-col sm:flex-row gap-4'>
-            <a href='https://github.com/alizey12' 
-              to="/projects" 
+            <NavLink >
+              <a href=''
               className={`px-8 py-3 rounded-full font-medium transition-colors duration-300 text-center ${themeClasses.button.primary}`}
             >
+
               View my work
-            </a>
+              </a>
+            </NavLink>
             <a href='https://drive.google.com/file/d/18CLXAE74lQQ2P8CH7jVhxEW22OHYNcq_/view?usp=drive_open'
               className={`px-8 py-3 rounded-full font-medium transition-colors duration-300 text-center ${themeClasses.button.secondary}`}
             >
