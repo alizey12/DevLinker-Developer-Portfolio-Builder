@@ -26,7 +26,7 @@ const Login = () => {
       ? 'bg-emerald-900/40 border-emerald-800/50 text-emerald-100 placeholder-emerald-300' 
       : 'bg-white border-emerald-200 text-emerald-800 placeholder-emerald-500',
     button: {
-      primary: `bg-${accentColor}-600 hover:bg-${accentColor}-800 ${theme === 'dark' ? 'text-white hover:bg-emerald-300' : 'text-emerald-700 hover:bg-emerald-600 hover:text-emerald-100'} transition-all duration-300 transform hover:scale-105`,
+      primary: `bg-${accentColor}-600 hover:bg-${accentColor}-500 ${theme === 'dark' ? 'text-white ' : 'text-emerald-300 hover:text-emerald-800'} transition-all duration-300 transform hover:scale-105`,
     }
   };
 

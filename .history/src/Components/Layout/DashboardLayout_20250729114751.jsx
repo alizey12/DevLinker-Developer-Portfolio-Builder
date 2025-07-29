@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router';
+import { Outlet, useNavigate } from 'react-router-';
 import Sidebar from '../Sidebar';
-import { ThemeContext } from '../../Context/ThemeContext';
+import { ThemeContext } from '.';
 import img1 from "../../assets/Leonardo.png";
 import { FaHome } from "react-icons/fa";
 import { motion, useAnimation } from 'framer-motion';

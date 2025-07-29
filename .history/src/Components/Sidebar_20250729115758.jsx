@@ -4,7 +4,7 @@ import { FiUser, FiCode, FiFolder, FiSettings, FiLogOut } from 'react-icons/fi';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
-import { ThemeContext } from '.././Context/ThemeContext';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 const Sidebar = ({ isCollapsed, onToggle, iconColor, bgColor }) => {
   const navigate = useNavigate();

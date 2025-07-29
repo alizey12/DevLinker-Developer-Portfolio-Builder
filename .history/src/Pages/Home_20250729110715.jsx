@@ -19,7 +19,7 @@ const Home = () => {
       : 'bg-white border-emerald-200 hover:border-emerald-500 shadow-lg',
     border: theme === 'dark' ? 'border-emerald-800' : 'border-emerald-200',
     button: {
-      primary: `bg-${accentColor}-600 hover:bg-${accentColor}-500 ${theme === 'dark' ? 'text-white' : 'text-emerald-300 hover:text-emerald-800'} transition-all duration-300 transform hover:scale-105`,
+      primary: `bg-${accentColor}-600 hover:bg-${accentColor}-500 ${theme === 'dark' ? 'text-white' : 'text-emerald-400 hover:text-emerald-'} transition-all duration-300 transform hover:scale-105`,
       secondary: theme === 'dark' 
         ? 'border border-emerald-600 hover:bg-emerald-800/60 text-emerald-300 transition-all duration-300 transform hover:scale-105' 
         : 'border border-emerald-300 hover:bg-emerald-200 text-emerald-700 transition-all duration-300 transform hover:scale-105'

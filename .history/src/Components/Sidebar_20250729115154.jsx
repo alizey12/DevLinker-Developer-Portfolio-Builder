@@ -4,7 +4,7 @@ import { FiUser, FiCode, FiFolder, FiSettings, FiLogOut } from 'react-icons/fi';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
-import { ThemeContext } from '.././Context/ThemeContext';
+import { ThemeContext } from '../../';
 
 const Sidebar = ({ isCollapsed, onToggle, iconColor, bgColor }) => {
   const navigate = useNavigate();
@@ -43,54 +43,51 @@ const Sidebar = ({ isCollapsed, onToggle, iconColor, bgColor }) => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3 }}
-      className={`sticky top-0 h-screen flex flex-col ${currentTheme.background} border-r ${currentTheme.border}`}
-      style={{ height: '100vh' }}
+      className={`h-screen flex flex-col ${currentTheme.background} border-r ${currentTheme.border}`}
     >
       {/* Header with toggle button */}
       <motion.button 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onToggle} 
-        className={`p-4 transition-all flex items-center justify-center ${currentTheme.menuButton} sticky top-0 z-10 ${currentTheme.background}`}
+        className={`p-4 transition-all flex items-center justify-center ${currentTheme.menuButton}`}
       >
-        <HiOutlineMenuAlt2 size={24} className={iconColor} />
+        <HiOutlineMenuAlt2 size={24} />
         {!isCollapsed && <span className="ml-2 text-sm font-medium">Menu</span>}
       </motion.button>
 
-      {/* Navigation links - scrollable content */}
-      <div className="flex-1 overflow-y-auto">
-        <nav className="mt-2">
-          <ul className="space-y-2 px-2">
-            {[
-              { to: "profile", icon: <FiUser size={20} />, label: "Profile" },
-              { to: "skills", icon: <FiCode size={20} />, label: "Skills" },
-              { to: "projects", icon: <FiFolder size={20} />, label: "Projects" },
-              { to: "settings", icon: <FiSettings size={20} />, label: "Settings" }
-            ].map((item) => (
-              <li key={item.to}>
-                <NavLink 
-                  to={item.to}
-                  className={({ isActive }) => 
-                    `flex items-center p-3 rounded-lg transition-all ${
-                      isActive 
-                        ? currentTheme.activeLink 
-                        : currentTheme.inactiveLink
-                    }`
-                  }
-                >
-                  <span className="flex items-center">
-                    {React.cloneElement(item.icon, { className: iconColor })}
-                    {!isCollapsed && <span className="ml-3 text-sm font-medium">{item.label}</span>}
-                  </span>
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      {/* Navigation links */}
+      <nav className="flex-1 mt-2">
+        <ul className="space-y-2 px-2">
+          {[
+            { to: "profile", icon: <FiUser size={20} />, label: "Profile" },
+            { to: "skills", icon: <FiCode size={20} />, label: "Skills" },
+            { to: "projects", icon: <FiFolder size={20} />, label: "Projects" },
+            { to: "settings", icon: <FiSettings size={20} />, label: "Settings" }
+          ].map((item) => (
+            <li key={item.to}>
+              <NavLink 
+                to={item.to}
+                className={({ isActive }) => 
+                  `flex items-center p-3 rounded-lg transition-all ${
+                    isActive 
+                      ? currentTheme.activeLink 
+                      : currentTheme.inactiveLink
+                  }`
+                }
+              >
+                <span className="flex items-center">
+                  {React.cloneElement(item.icon, { className: iconColor })}
+                  {!isCollapsed && <span className="ml-3 text-sm font-medium">{item.label}</span>}
+                </span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-      {/* Footer with logout button - sticky at bottom */}
-      <div className={`sticky bottom-0 p-4 ${currentTheme.background} border-t ${currentTheme.border}`}>
+      {/* Footer with logout button */}
+      <div className="p-4">
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}

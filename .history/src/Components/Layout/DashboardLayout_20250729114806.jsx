@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router';
-import Sidebar from '../Sidebar';
+import { Outlet, useNavigate } from 'react-router-';
+import Sidebar from '../';
 import { ThemeContext } from '../../Context/ThemeContext';
 import img1 from "../../assets/Leonardo.png";
 import { FaHome } from "react-icons/fa";
