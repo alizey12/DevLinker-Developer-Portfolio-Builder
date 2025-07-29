@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import { FiCode, FiLayout, FiSmartphone, FiZap } from 'react-icons/fi';
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from '../Context/';
 
 const Home = () => {
   const { theme, accentColor } = useContext(ThemeContext);
