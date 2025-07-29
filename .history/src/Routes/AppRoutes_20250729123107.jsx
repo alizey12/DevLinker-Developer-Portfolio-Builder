@@ -9,10 +9,10 @@ import Contact from '../Components/Contact';
 
 // Make sure all these imports actually exist at these paths
 import Dashboard from '../Pages/Dashboard/Dashboard';
-import Profile from '../Pages/Dashboard/Profile';
+import Profile from '../Pages/Dashboard/';
 import Skills from '../Pages/Dashboard/Skills';
-import Projects from '../Pages/Dashboard/Project'; // Fixed typo in filename (Project -> Projects)
-import Settings from '../Pages/Dashboard/Setting'; // Fixed typo in filename (Setting -> Settings)
+import Projects from '../Pages/Dashboard/Projects'; // Fixed typo in filename (Project -> Projects)
+import Settings from '../Pages/Dashboard/Settings'; // Fixed typo in filename (Setting -> Settings)
 
 const AppRoutes = () => {
   return (

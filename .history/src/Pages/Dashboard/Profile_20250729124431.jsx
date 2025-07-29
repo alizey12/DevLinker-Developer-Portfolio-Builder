@@ -35,7 +35,7 @@ const Profile = () => {
       primary: theme === 'dark' 
       ? `bg-${accentColor}-600 hover:bg-${accentColor}-500 text-white`
       : `bg-${accentColor}-600 hover:bg-${accentColor}-500 text-emerald-700`
-      ,      secondary: theme === 'dark' 
+          }      secondary: theme === 'dark' 
         ? 'border border-emerald-600 hover:bg-emerald-700/50 text-emerald-300' 
         : 'border border-emerald-300 hover:bg-emerald-100 text-emerald-700'
     }
