@@ -85,7 +85,6 @@ const Home = () => {
           <div className='relative'>
             <div className={`absolute inset-0 rounded-full blur-lg -z-10 ${theme === 'dark' ? 'bg-emerald-800/20' : 'bg-emerald-200/50'}`}></div>
             <img 
-            src="src/assets/OIP.png"
               alt="Business integration illustration"
               className='w-full max-w-xs md:max-w-sm mix-blend-lighten opacity-90'
             />
