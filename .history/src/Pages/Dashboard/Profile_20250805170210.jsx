@@ -4,7 +4,7 @@ import { SiGmail } from "react-icons/si";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ThemeContext } from '../../Context/ThemeContext';
-import img1 from "/assets/Leonardo.png";
+import img1 from "../../";
 import { motion } from 'framer-motion';
 
 const Profile = () => {

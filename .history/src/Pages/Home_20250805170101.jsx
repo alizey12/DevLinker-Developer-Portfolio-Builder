@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { FiCode, FiLayout, FiSmartphone, FiZap } from 'react-icons/fi';
 import { ThemeContext } from '../Context/ThemeContext';
-import img2 from "/assets/OIP.png";
-
 const Home = () => {
   const { theme, accentColor } = useContext(ThemeContext);
 
@@ -86,7 +84,7 @@ const Home = () => {
           <div className='relative'>
             <div className={`absolute inset-0 rounded-full blur-lg -z-10 ${theme === 'dark' ? 'bg-emerald-800/20' : 'bg-emerald-200/50'}`}></div>
             <img 
-            src={img2}
+            src='./'
               alt="Business integration illustration"
               className='w-full max-w-xs md:max-w-sm mix-blend-lighten opacity-90'
             />
